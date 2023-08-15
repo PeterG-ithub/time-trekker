@@ -1,24 +1,3 @@
-# README
+# Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Time Trekker is a versatile application that combines a to-do list with integrated time tracking capabilities. This app offers an efficient way to manage tasks while monitoring the time spent on each activity. With Time Trekker, you can easily organize your tasks and gain insights into how you allocate your time throughout the day.
