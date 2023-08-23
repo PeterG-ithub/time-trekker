@@ -15,6 +15,10 @@
     Today
     Upcoming
     Categories
+    <%= link_to 'Add category', new_category_path %>
+    <% @categories.each do |category| %>
+      <%= category.title %>
+    <% end %>
   </nav>
 </section>
 <section class="app-body">
