@@ -1,1 +1,14 @@
-<h1>Time Trekker</h1>
+
+<nav class="home-nav">
+  <div class="nav-left">
+    <div class="logo">
+      <a href="/home"><%= image_tag "stopwatch.png", alt: "time trekker logo"%>
+      <p class="logo-text">Time Trekker</p></a>
+    </div>
+    <%= link_to 'Features' %>
+  </div>
+  <div class="nav-right">
+    <%= button_to 'Log in', new_user_session_path, data: { turbo: false }%>
+    <%= button_to 'Sign up', new_user_registration_path, method: :get%>
+  </div>
+</nav>

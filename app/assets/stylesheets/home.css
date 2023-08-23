@@ -1,0 +1,21 @@
+
+.home-nav {
+  display: flex;
+  max-width: 1300px;
+  justify-content: space-between;
+  margin: auto;
+  padding: 1rem;
+}
+
+.home-nav > div,
+.home-nav .logo > a {
+  display: flex;
+  align-items: center;
+}
+
+.home-nav > div {
+  gap: 0.7rem;
+}
+.home-nav img {
+  width: 50px; 
+}
