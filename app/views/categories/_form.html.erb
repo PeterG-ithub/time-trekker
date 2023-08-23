@@ -1,0 +1,9 @@
+<% category.errors.full_messages.each do |message| %>
+  <%= message %>
+<% end %>
+<%= form_with model: @category, url: category_path do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.submit %>
+<% end %>
