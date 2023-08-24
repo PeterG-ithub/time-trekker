@@ -5,10 +5,13 @@ class CategoriesController < ApplicationController
 
   def create
     @category = current_user.categories.build(categories_params)
-    if @category.save
-      redirect_to app_path
-    else
-      render :new, status: :unprocessable_entity
+    respond_to do |format| 
+      if @category.save
+        format.turbo_stream
+        redirect_to app_path
+      else
+        format.html { render :new, status: :unprocessable_entity }
+      end
     end
   end
 
