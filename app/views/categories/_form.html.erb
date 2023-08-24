@@ -1,6 +1,6 @@
 <%= form_with model: @category, url: category_path do |form| %>
   <%= form.label :title %>
-  <%= form.text_field :title, placeholder: 'Category' %>
+  <%= form.text_field :title, placeholder: 'Category', autofocus: true %>
   <div class="btns">
     <%= button_tag "Cancel", data: { action: 'modal#closeModal' }%>
     <%= form.submit 'Save' %>
