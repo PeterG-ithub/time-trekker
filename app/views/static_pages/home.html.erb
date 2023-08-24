@@ -8,7 +8,11 @@
     <%= link_to 'Features' %>
   </div>
   <div class="nav-right">
-    <%= button_to 'Log in', new_user_session_path, data: { turbo: false }%>
-    <%= button_to 'Sign up', new_user_registration_path, method: :get%>
+    <% if user_signed_in? %>
+      <%= button_to 'Go to app', app_path, method: :get %>
+    <% else %>
+      <%= button_to 'Log in', new_user_session_path, data: { turbo: false }%>
+      <%= button_to 'Sign up', new_user_registration_path, method: :get%>
+    <% end %>
   </div>
 </nav>
