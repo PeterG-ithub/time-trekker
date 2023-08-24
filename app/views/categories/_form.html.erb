@@ -1,9 +1,13 @@
-<% category.errors.full_messages.each do |message| %>
-  <%= message %>
-<% end %>
 <%= form_with model: @category, url: category_path do |form| %>
   <%= form.label :title %>
-  <%= form.text_field :title %>
-
-  <%= form.submit %>
+  <%= form.text_field :title, placeholder: 'Category' %>
+  <div class="btns">
+    <%= button_tag "Cancel", data: { action: 'modal#closeModal' }%>
+    <%= form.submit 'Save' %>
+  </div>
 <% end %>
+<div class="error">
+  <% category.errors.full_messages.each do |message| %>
+    <%= message.downcase %>
+  <% end %>
+</div>
