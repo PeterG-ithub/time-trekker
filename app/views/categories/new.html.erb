@@ -1,8 +1,12 @@
+
 <%= turbo_frame_tag 'modal' do %>
-  <div class="modal-overlay">
-    <div class="modal-form">
-      <h1>New Category</h1>
-      <%= render 'form', category: @category %>
+  <div data-controller='modal'>
+    <div class="modal-overlay">
+      <div class="modal-form">
+          <h1>New Category</h1>
+          <%= render 'form', category: @category %>
+          <%= button_tag "Close", data: { action: 'modal#closeModal' }%>
+      </div>
     </div>
   </div>
 <% end %>
