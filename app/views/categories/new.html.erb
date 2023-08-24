@@ -1,2 +1,8 @@
-<h1>New Category</h1>
-<%= render 'form', category: @category %>
+<%= turbo_frame_tag 'modal' do %>
+  <div class="modal-overlay">
+    <div class="modal-form">
+      <h1>New Category</h1>
+      <%= render 'form', category: @category %>
+    </div>
+  </div>
+<% end %>
